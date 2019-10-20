@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+<title>Create your Google Accounts</title>
+<script type="text/javascript">  
+function matchpass(){  
+var firstpassword=document.f1.password.value;  
+var secondpassword=document.f1.confirm.value;  
+  
+if(firstpassword==secondpassword){  
+return true;  
+}  
+else{  
+alert("password must be same!");  
+return false;  
+}  
+}  
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    return true;
+  } else {
+    return false;
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    return true;
+  } else {
+    return false;
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    return true;
+  } else {
+    return false;
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    return true;
+  } else {
+    return false;
+  }
+</script>
+<style>
+.div1{
+    width:600px; 
+    height: 380px;
+    margin-top: 40px;
+    border: 1px solid silver; 
+    padding: 50px;
+    border-radius: 3%;
+}
+.divl{
+    width: 400px;
+    float: left;
+}
+.divr{
+    width: 200px;
+    float: left;
+}
+.google{
+    width:100px;
+}
+.acc{
+    height: 280px;
+    width: 200px;
+    margin-top: 70px;
+}
+.name,.user,.password,.confirmpassword{
+    height: 20px;
+    padding: 5px;
+}
+.user{
+    width: 355px;
+}
+h3{
+    padding: 0px;
+    margin-top: 30px;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 10px;
+}
+.ca{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 900;
+}
+.c{
+    text-decoration: none;
+    color: blue;
+    margin-right: 140px;
+}
+.but{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 7px;
+    margin-top: 40px;
+}
+
+</style>
+</head>
+<body>
+    <center>
+    <div class="div1">
+    <div  class="col-6 col-s-9">
+    <div align="left" class="divl">
+        <img src="Google.png" align="left" class="google"><br>
+        <h3>Create Your Google Accounts</h3>
+        <form name="f1" onsubmit="return matchpass()">
+            <input type="text" class="name" placeholder="First name" required>
+            <input type="text" class="name" placeholder="Last name">
+            <br><br>
+            <input type="text" placeholder="Username" placeholder="Username" class="user" name="user" required><br>
+            <small>You can use letters, numbers & periods.</small>
+            <br><br>
+            <input type="password" class="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            <input type="password" class="confirmpassword" name="confirm" placeholder="Confirm">
+            <br><br>
+            <small>Use 8 or more characters with a mix of letters, <br>numbers & symbols</small>
+            <div>
+                <p class="ca"><a href="Login Page.html" class="c">Signin Instead</a>
+                <input type="submit" value="Next" class="but"></p>
+            </div>
+        </form>
+    </div>
+</div>
+    <div class="col-3 col-s-12">
+    <div align="right" class="divr">
+        <img src="Google Ac.png" class="acc">
+    </div>
+    </div>
+    </div>
+    <div id="google_translate_element"></div>
+    <script> 
+    function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en'
+    }, 'google_translate_element');
+    }
+    </script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+</center>
+</body>
+</html>
